@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: whatsapp-chatbot
+    env: java
+    plan: free
+    buildCommand: mvn clean package
+    startCommand: java -jar target/chatbot-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: serviceAccountKey.json
