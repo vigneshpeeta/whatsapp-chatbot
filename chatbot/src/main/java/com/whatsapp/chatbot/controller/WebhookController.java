@@ -77,7 +77,8 @@ public class WebhookController {
                 firebaseService.saveChat(userName, userNumber, userMessage, replyText);
 
 
-                String TOKEN = "EAAPFgqRIILIBOyER7ZCKfgqqgZAWBHc35ZBMZA4ZAzQVZCwO7SWUf5fBZCcVds8mXPZBwiUZAUzUw3U5PdNvKkafmUI7LeWWrhmLR2esVYt3zWHA4CJ0p018gGYWqdq49QQd1wfjeQulHzqbKnVZBy0fc5iZAZB8Ds7TRGqRhI1VJG0dI85RCd0ZAWaF5ZAagPfmAoq9ZB3jJAiZBTrOkolfjVZAeaCieK979D13eJI2bZCrkToNaabAZDZD";
+                String TOKEN = System.getenv("WHATSAPP_TOKEN");
+
                 String PHONE_NUMBER_ID = "621107784430349";
 
                 String url = "https://graph.facebook.com/v18.0/" + PHONE_NUMBER_ID + "/messages";
